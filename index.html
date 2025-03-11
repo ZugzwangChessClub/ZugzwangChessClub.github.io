@@ -315,21 +315,51 @@
 
 
           <style>
+            .table-container {
+                width: 100%;
+                overflow-x: auto; /* Allows horizontal scrolling on small screens */
+                padding: 10px; /* Adds some spacing */
+            }
+
             table {
                 width: 80%;
+                max-width: 100%;
                 border-collapse: collapse;
                 background: #fff;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                 border-radius: 10px;
                 overflow: hidden;
                 border: 2px solid #333;
+                margin: auto; /* Centers the table */
             }
-    
+
+            /* Make table more readable on small screens */
             th, td {
                 padding: 15px;
                 text-align: left;
+                min-width: 100px; /* Ensures cells don’t shrink too much */
+
                 border-bottom: 1px solid #ddd;
                 border: 2px solid #333;
+            }
+
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                table {
+                    width: 100%; /* Table takes full width on small screens */
+                }
+                
+                th, td {
+                    font-size: 14px; /* Reduce font size for readability */
+                    padding: 8px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                th, td {
+                    font-size: 12px; /* Further reduce font size for smaller screens */
+                    padding: 6px;
+                }
             }
     
             th {
@@ -357,21 +387,22 @@
                 text-decoration: underline;
             }
         </style>
-
-          <table >
-            <tr>
-              <th>Name of Tournament</th>
-              <th>Date/Time of Tournament</th>
-              <th>Location of Tournament</th>
-              <th>Sign Up Form</th>
-            </tr>
-            <tr style="color: #333;">
-              <td>Zugzwang Champions Concours (Sponsored by ChessNut)</td>
-              <td>October 12-13, 2024 at 2:30PM EST</td>
-              <td>Online(Chess.com) Zugzwang Chess Club: <a href="https://www.chess.com/club/zugzwang-club/">https://www.chess.com/club/zugzwang-club/</a></td>
-              <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSc>hvsRo5D-DpdyMBebVrY3QtKTj9T9eBQeinqq_e1zI69130w/viewform">https://docs.google.com/forms/d/e/1FAIpQLSc>hvsRo5D-DpdyMBebVrY3QtKTj9T9eBQeinqq_e1zI69130w/viewform</a></td>
-            </tr>
-          </table>
+          <div class="table-container">
+            <table >
+              <tr>
+                <th>Name of Tournament</th>
+                <th>Date/Time of Tournament</th>
+                <th>Location of Tournament</th>
+                <th>Sign Up Form</th>
+              </tr>
+              <tr style="color: #333;">
+                <td>Zugzwang Champions Concours (Sponsored by ChessNut)</td>
+                <td>October 12-13, 2024 at 2:30PM EST</td>
+                <td>Online(Chess.com) Zugzwang Chess Club: <a href="https://www.chess.com/club/zugzwang-club/">https://www.chess.com/club/zugzwang-club/</a></td>
+                <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSc>hvsRo5D-DpdyMBebVrY3QtKTj9T9eBQeinqq_e1zI69130w/viewform">https://docs.google.com/forms/d/e/1FAIpQLSc>hvsRo5D-DpdyMBebVrY3QtKTj9T9eBQeinqq_e1zI69130w/viewform</a></td>
+              </tr>
+            </table>
+          </div>
         </div>
 
         <div style="clear: both;">
