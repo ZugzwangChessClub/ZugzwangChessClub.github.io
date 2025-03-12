@@ -172,7 +172,17 @@
     /* Hide on small screens */
     @media (max-width: 768px) {
       .topnav {
-        display: none; /* Hide the topnav initially on phones */
+        display: flex; /* Keep it in the layout */
+      }
+
+      .topnav.hidden {
+        opacity: 0;
+        visibility: hidden; /* Hide the topnav on small screens */
+      }
+
+      .topnav.visible {
+        opacity: 1;
+        visibility: visible; /* Make the topnav visible again */
       }
     }
 
