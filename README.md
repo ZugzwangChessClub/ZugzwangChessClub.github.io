@@ -22,28 +22,30 @@ Our mission is to **make chess accessible to everyone** while promoting sportsma
 ---
 
 ## 🛠️ Features
-Our website includes the following features to enhance your chess experience:
 
 ### ⭐ Club Information
 - Learn about our **history, mission, and team**.
 - Discover the **benefits** of joining our chess community.
+- Meet our current leadership team, which includes **Sarveshwar Senthil Kumar, Liam Pham, Elijah=Reilly Wright, Pranav Bailoor, and Nicholas Noronha** alongside the previous leadership team, ensuring the club’s continuity and growth.
+- Get to know the amazing members who are working together to make the club thrive.
 
 ### ⚖️ Upcoming Tournaments
-- Stay updated on our **scheduled events**.
+- Stay updated on our **scheduled events**, including the exciting **Peel District-Wide Chess Tournament** on May 22nd.
 - **Register** to participate in online and in-person chess tournaments.
-- View **leaderboards** and rankings.
+- View **leaderboards** and rankings, and track your progress as you compete.
 
 ### 📸 Memories Gallery
 - Browse through a **collection of photos and highlights** from past events.
-- Relive **memorable moments** with our community.
+- Relive **memorable moments** with our community, from friendly matches to competitive tournaments.
 
 ### 👥 Partners & Sponsors
 - Acknowledge the **organizations and individuals** that support us.
-- Learn how to become a **sponsor or partner**.
+- Learn how to become a **sponsor or partner** and contribute to the growth of our chess community.
 
 ### 📞 Connect with Us
-- **Follow us** on social media platforms.
-- Get in touch via **email** or **contact forms**.
+- **Follow us** on social media platforms for the latest updates.
+- Get in touch via **email** or **contact forms** with any questions or suggestions.
+
 
 ---
 

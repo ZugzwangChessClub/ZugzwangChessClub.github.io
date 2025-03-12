@@ -11,127 +11,137 @@
 </head>
 
 <body style="background-color: #333333;">
-    <style>
-      /* Style the navigation bar */
-        .topnav {
-        background-color: #222222;
-        position: fixed;
-        top: 0px;
-        z-index: 9999;
-        width: 100%;
+  <style>
+    /* Style the navigation bar */
+    .topnav {
+      background-color: #222222;
+      position: fixed;
+      top: 0px;
+      z-index: 9999;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 10px;
+    }
+  
+    /* Navigation links container */
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-left: auto;
+    }
+  
+    /* Style the links inside the navigation bar */
+    .nav-links a {
+      color: #f2f2f2;
+      text-align: center;
+      padding: 10px 15px;
+      font-family: Calibri, Arial;
+      text-decoration: none;
+      font-size: 1vw;
+      border-right: 2px solid black;
+    }
+  
+    /* Change the color of links on hover */
+    .nav-links a:hover {
+      background-color: #333;
+      color: white;
+      text-decoration: none;
+    }
+  
+    /* Add a color to the active/current link */
+    .nav-links a.active {
+      background-color: #00b4a3;
+      color: white;
+    }
+  
+    .logo img {
+      height: 50px;
+      width: auto;
+      padding-right: 20px;
+      border-right: 2px solid black;
+    }
+  
+    /* Social media container */
+    .social-links {
+      display: flex;
+      gap: 25px;
+      margin-left: 20px;
+    }
+  
+    .social-links a {
+      color: white;
+      font-size: 2vw;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      background-color: #333;
+      color: white;
+      text-decoration: none;
+    }
+  
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .topnav {
+        flex-direction: column;
+        align-items: center;
       }
-      
-      /* Style the links inside the navigation bar */
-      .topnav a {
-        float: right;
-        color: #f2f2f2;
+  
+      .nav-links {
+        flex-direction: column;
         text-align: center;
-        padding: 20px 20px;
-        font-family: Calibri, Arial;
-        margin-top: 0.2%; 
-        padding-bottom: 20px;
-        text-decoration: none;
-        font-size: 1vw;
-        border-right: 2px solid black;
       }
-      
-      /* Change the color of links on hover */
-      .topnav a:hover {
-        background-color: #ddd;
-        color: black;
+  
+      .nav-links a {
+        font-size: 3.5vw;
+        padding: 10px;
+        border-right: none;
       }
-      
-      /* Add a color to the active/current link */
-      .topnav a.active {
-        background-color: #00b4a3;
-        color: white;
+  
+      .logo img {
+        height: 40px;
       }
-
-      /* Make the logo as big as possible */
-      .topnav ab img {
-        margin-top: 10px;
-        height: 50px; 
-        width: auto;
-        text-decoration: none;
-        font-size: 1vw;
-        padding-right: 20px;
-        border-right: 2px solid black;
+  
+      .social-links {
+        justify-content: center;
+        flex-wrap: wrap;
       }
-
-      /* Media Query for responsiveness */
-      @media (max-width: 768px) {
-        .topnav a {
-          font-size: 3.5vw; /* Increase font size for mobile */
-          padding: 15px 10px;
-          text-align: center;
-        }
-
-        .topnav ab img {
-          width: 40px; /* Adjust logo size */
-          height: auto;
-        }
-
-        /* Adjust the content layout */
-        .follow-container {
-          grid-template-columns: 1fr;
-          padding: 10px;
-        }
-
-        .follow-btn {
-          font-size: 3vw; /* Increase button text size */
-          padding: 10px;
-        }
-
-        .sponsor-container {
-          flex-direction: column;
-          padding: 20px 0;
-        }
-
-        .sponsor-container img {
-          width: 70%;
-          max-width: 200px;
-        }
-
-        /* Adjust the table layout */
-        table {
-          width: 100%;
-          font-size: 3vw; /* Adjust table text size */
-        }
-
-        th, td {
-          padding: 12px;
-        }
-
-        h1, h2 {
-          font-size: 4vw; /* Adjust heading font size */
-        }
-
-        p {
-          font-size: 3vw; /* Adjust paragraph font size */
-        }
-      }
-    </style>
-
-    <!-- Navigation Bar -->
-    <div class="topnav">
-        <ab style="float:left; color: white; margin-left: 1%;" href="/"><img src="ZugzwangLogo.png" alt="Zugzwang Logo"></ab>
-        <a style="float:left; color: white;" target="_blank" href="https://github.com/ZugzwangChessClub"><i class="fa-brands fa-github" style="font-size: 1.5vw;"></i></a>
-        <a style="float:left; color: white;" target="_blank" href="https://discord.com/invite/UyghD9ZCQJ"><i class="fa-brands fa-discord" style="font-size: 1.5vw;"></i></a>
-        <a style="float:left; color: white;" target="_blank" href="https://www.instagram.com/zugzwangchessclub/"><i class="fa-brands fa-instagram" style="font-size: 1.5vw;"></i></a>
-        <a style="float:left; color: white;" target="_blank" href="https://www.twitch.tv/zugzwangchessclub"><i class="fa-brands fa-twitch" style="font-size: 1.5vw;"></i></a>
-        <a style="float:left; color: white;" target="_blank" href="https://zugzwangcc.wordpress.com"><i class="fa-brands fa-wordpress-simple" style="font-size: 1.5vw;"></i></a>
-        <a style="float:left; color: white;" target="_blank" href="https://www.chess.com/club/zugzwang-club"><i class="fa-solid fa-chess-board" style="font-size: 1.5vw;"></i></a>
-        <a style="float:left; color: white;" target="_blank" href="https://drive.google.com/drive/folders/1_IzsOJ2hare8QEWBU-HqRME7ey_JgVQV?usp=sharing"><i class="fa-brands fa-google-drive" style="font-size: 1.5vw;"></i></a>
-        <a style="float:left; color: white;" target="_blank" href="mailto: chessclubzugzwang@gmail.com"><i class="fa-solid fa-envelope" style="font-size: 1.5vw;"></i></a>
-        <a style="float:left; color: white;" target="_blank" href="tel:437-450-4378"><i class="fa-solid fa-phone" style="font-size: 1.5vw;"></i></a>
-
-        <a href="#viewmemories" style="text-decoration: none;">View Memories</a>
-        <a href="#upcomingtournaments" style="text-decoration: none;">Upcoming Tournaments</a>
-        <a href="#partners" style="text-decoration: none;">Partners/Sponsors</a>
-        <a href="#followus" style="text-decoration: none;">Follow Us</a>
-        <a href="#aboutus" style="text-decoration: none;">About Us</a>
+    }
+  </style>
+  
+  <!-- Navigation Bar -->
+  <div class="topnav">
+    <div class="logo">
+      <a href="/"><img src="ZugzwangLogo.png" alt="Zugzwang Logo"></a>
     </div>
+    
+    <div class="social-links">
+      <a target="_blank" href="https://github.com/ZugzwangChessClub"><i class="fa-brands fa-github"></i></a>
+      <a target="_blank" href="https://discord.com/invite/UyghD9ZCQJ"><i class="fa-brands fa-discord"></i></a>
+      <a target="_blank" href="https://www.instagram.com/zugzwangchessclub/"><i class="fa-brands fa-instagram"></i></a>
+      <a target="_blank" href="https://www.twitch.tv/zugzwangchessclub"><i class="fa-brands fa-twitch"></i></a>
+      <a target="_blank" href="https://zugzwangcc.wordpress.com"><i class="fa-brands fa-wordpress-simple"></i></a>
+      <a target="_blank" href="https://www.chess.com/club/zugzwang-club"><i class="fa-solid fa-chess-board"></i></a>
+      <a target="_blank" href="https://drive.google.com/drive/folders/1_IzsOJ2hare8QEWBU-HqRME7ey_JgVQV?usp=sharing"><i class="fa-brands fa-google-drive"></i></a>
+      <a target="_blank" href="mailto: chessclubzugzwang@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      <a target="_blank" href="tel:437-450-4378"><i class="fa-solid fa-phone"></i></a>
+    </div>
+    
+    <div class="nav-links">
 
+      <a href="#aboutus">About Us</a>
+      <a href="#teamandcurrent">Our Team</a>
+      <a href="#followus">Follow Us</a>
+      <a href="#partners">Partners/Sponsors</a>
+      <a href="#upcomingtournaments">Upcoming Tournaments</a>
+      <a href="#viewmemories">View Memories</a>
+
+    </div>
+  </div>
+  
     <div>
         <yellow style="color: yellow;">Zugzwang Chess Club</yellow>, created by Sarveshwar Senthil Kumar, 2025
     </div>
@@ -173,6 +183,53 @@
 
               <h2 style="font-size: 2.5vw; text-align: center; margin-top: 2%;">Origin Story:</h2>
               <p style="text-align: center">The <yellow style="color: yellow;">Zugzwang Chess Club</yellow> was founded in Grade 11 by Sarveshwar Senthil Kumar and Liam Pham. We were frustrated by the mismanagement and lack of structure in their school's official chess club. Determined to create a space for passionate players, we established the club, named after the chess term for a position where any move worsens the situation, symbolizing their drive to always improve. Despite facing resistance and being initially marginalized by the school's existing chess leadership, We persisted, building a thriving community that emphasized learning, competition, and a love for the game. Their efforts eventually led to the decline of the old club and the rise of <gold style="color: gold;">Zugzwang</gold> as a respected force in the school's chess scene.</p>
+          </div>
+
+          <div style="clear: both;">
+            <hr style="border: 2px solid black; margin-bottom: 5%; margin-top: 4%; ">
+          </div>
+
+          <div id="teamandcurrent" style="font-family: Calibri, Arial; color: white;">
+            <h2 style="font-size: 3vw; font-weight: bold; margin-left: 5%; margin-bottom: 15px;">Our Team:</h2>
+            
+            <div style="border: 1px solid white; padding: 20px; margin: 15px 5%; border-radius: 15px;">
+              <h3 style="font-size: 1.5vw;"><a href="https://sarveshwarsenthilkumar.github.io" style="color: white;">Sarveshwar Senthil Kumar</a></h3>
+              <p style="font-size: 1.5vw;">Founder and President</p>
+            </div>
+            
+            <div style="border: 1px solid white; padding: 20px; margin: 15px 5%; border-radius: 15px; margin-bottom: 3%;">
+              <h3 style="font-size: 1.5vw;"><a href="https://www.google.com/search?q=liam+pham" style="color: white;">Liam Pham</a></h3>
+              <p style="font-size: 1.5vw;">Founder and President</p>
+            </div>
+
+            <div style="border: 1px solid white; padding: 20px; margin: 15px 5%; border-radius: 15px;">
+              <h3 style="font-size: 1.5vw;"><a href="https://www.instagram.com/noronha.nicholas/" style="color: white;">Nicholas Noronha</a></h3>
+              <p style="font-size: 1.5vw;">Vice-President</p>
+            </div>
+            
+            <div style="border: 1px solid white; padding: 20px; margin: 15px 5%; border-radius: 15px;">
+              <h3 style="font-size: 1.5vw;"><a href="https://www.instagram.com/pranavb_nj/" style="color: white;">Pranav Bailoor</a></h3>
+              <p style="font-size: 1.5vw;">Vice-President</p>
+            </div>
+            
+            <div style="border: 1px solid white; padding: 20px; margin: 15px 5%; border-radius: 15px;">
+              <h3 style="font-size: 1.5vw;"><a href="https://www.instagram.com/elijah.asf143/" style="color: white;">Elijah Reilly-Wright</a></h3>
+              <p style="font-size: 1.5vw;">Vice-President</p>
+            </div>
+            
+          </div>
+          
+          <div style="clear: both;">
+            <hr style="border: 2px solid black; margin-bottom: 5%; margin-top: 4%; ">
+          </div>
+
+          <div style="font-size: 1.5vw; font-weight: bold; margin-left: 5%; margin-right: 5%; margin-bottom: 15px; color: white; font-family: Calibri, Arial;">
+            <h1 style="margin-bottom: 2%; font-size: 3vw;">What's Happening Now:</h1>
+            <h3>We are currently managing the chess club at Port Credit Secondary School, working alongside the previous leadership team to ensure a smooth transition and continued success. As part of our efforts to engage more students and foster a love for chess, we are also organizing the highly anticipated Peel District-Wide Chess Tournament, which will take place on May 22nd. It's shaping up to be an exciting event, and we’ll keep you updated with more details as the date approaches!<br><br>
+
+              If you’re interested in joining us for some friendly chess matches, come visit us every Monday during lunch in Room 127. Whether you’re a seasoned player or just getting started, we welcome all skill levels and look forward to seeing new faces. It's a great opportunity to improve your game, make new friends, and have some fun along the way!
+            </h3>
+
           </div>
 
           <div style="clear: both;">
