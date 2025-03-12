@@ -76,7 +76,7 @@
       font-size: 2vw;
       text-decoration: none;
     }
-
+  
     .social-links a:hover {
       background-color: #333;
       color: white;
@@ -88,26 +88,49 @@
       .topnav {
         flex-direction: column;
         align-items: center;
+        padding: 10px;
       }
   
       .nav-links {
         flex-direction: column;
         text-align: center;
+        width: 100%;
       }
   
       .nav-links a {
         font-size: 3.5vw;
         padding: 10px;
         border-right: none;
+        width: 100%;
+        text-align: center;
       }
   
       .logo img {
         height: 40px;
+        margin-bottom: 10px;
       }
   
       .social-links {
         justify-content: center;
         flex-wrap: wrap;
+        width: 100%;
+        margin-top: 10px;
+      }
+  
+      .social-links a {
+        font-size: 5vw;
+        margin-right: 10px;
+      }
+    }
+  
+    /* For very small screens, adjust social links and logo */
+    @media (max-width: 480px) {
+      .social-links a {
+        font-size: 6vw;
+      }
+  
+      .nav-links a {
+        font-size: 5vw;
       }
     }
   </style>
@@ -131,16 +154,15 @@
     </div>
     
     <div class="nav-links">
-
       <a href="#aboutus">About Us</a>
       <a href="#teamandcurrent">Our Team</a>
       <a href="#followus">Follow Us</a>
       <a href="#partners">Partners/Sponsors</a>
       <a href="#upcomingtournaments">Upcoming Tournaments</a>
       <a href="#viewmemories">View Memories</a>
-
     </div>
   </div>
+  
   
     <div>
         <yellow style="color: yellow;">Zugzwang Chess Club</yellow>, created by Sarveshwar Senthil Kumar, 2025
