@@ -133,10 +133,46 @@
         font-size: 5vw;
       }
     }
+
+    @keyframes fadeOut {
+      0% {
+        opacity: 1;
+        visibility: visible;
+      }
+      100% {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    .topnav {
+      background-color: #222222;
+      position: fixed;
+      top: 0px;
+      z-index: 9999;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 10px;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+
+    /* Initially, it is visible */
+    .topnav.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* When fade-out is applied */
+    .topnav.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
   </style>
   
   <!-- Navigation Bar -->
-  <div class="topnav">
+  <div id="topnav" class="topnav">
     <div class="logo">
       <a href="/"><img src="ZugzwangLogo.png" alt="Zugzwang Logo"></a>
     </div>
@@ -162,6 +198,26 @@
       <a href="#viewmemories">View Memories</a>
     </div>
   </div>
+
+  <script>
+    let prevScrollpos = window.pageYOffset;
+    const navbar = document.querySelector('.topnav');
+  
+    window.onscroll = function () {
+      let currentScrollPos = window.pageYOffset;
+  
+      if (prevScrollpos > currentScrollPos) {
+        // Scrolling up - show the navbar
+        navbar.classList.remove('hidden');
+        navbar.classList.add('visible');
+      } else {
+        // Scrolling down - hide the navbar
+        navbar.classList.remove('visible');
+        navbar.classList.add('hidden');
+      }
+      prevScrollpos = currentScrollPos;
+    };
+  </script>
   
   
     <div>
