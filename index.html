@@ -169,6 +169,19 @@
       opacity: 0;
       visibility: hidden;
     }
+    /* Hide on small screens */
+    @media (max-width: 768px) {
+      .topnav {
+        display: none; /* Hide the topnav initially on phones */
+      }
+    }
+
+    /* Show on larger screens (default behavior) */
+    @media (min-width: 769px) {
+      .topnav {
+        display: flex; /* Show the topnav */
+      }
+    }
   </style>
   
   <!-- Navigation Bar -->
