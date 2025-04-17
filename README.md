@@ -26,7 +26,7 @@ Our mission is to **make chess accessible to everyone** while promoting sportsma
 ### ⭐ Club Information
 - Learn about our **history, mission, and team**.
 - Discover the **benefits** of joining our chess community.
-- Meet our current leadership team, which includes **Sarveshwar Senthil Kumar, Liam Pham, Elijah=Reilly Wright, Pranav Bailoor, and Nicholas Noronha** alongside the previous leadership team, ensuring the club’s continuity and growth.
+- Meet our current leadership team, which includes **Sarveshwar Senthil Kumar, Liam Pham, Elijah Reilly-Wright, Pranav Bailoor, and Nicholas Noronha** alongside the previous leadership team, ensuring the club’s continuity and growth.
 - Get to know the amazing members who are working together to make the club thrive.
 
 ### ⚖️ Upcoming Tournaments
