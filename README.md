@@ -99,6 +99,18 @@ We appreciate every contribution that helps make this project better! 🌟
 
 ---
 
+🔗 **Visit Now:** [https://zugzwangchessclub.github.io](https://zugzwangchessclub.github.io)  
+
+## ✨ **What's New?**  
+Our website has undergone a **complete frontend transformation**! 🎨✨  
+
+✅ **Sleek, Modern UI** – A fresh, intuitive design for seamless navigation  
+✅ **Enhanced Responsiveness** – Optimized for **desktop, tablet & mobile**  
+✅ **Dynamic Animations** – Smooth transitions for an engaging experience  
+✅ **Revamped Tournament Section** – Easier registration & real-time updates  
+
+---
+
 ## ⚖️ License
 This project is licensed under the **Apache-2.0 License**. See the [LICENSE](LICENSE) file for more details.
 
