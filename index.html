@@ -241,12 +241,13 @@
             flex-wrap: wrap;
             align-items: center;
             margin-left: auto;
+            gap: 10px;
         }
 
         .nav-links a {
             color: var(--text);
             text-align: center;
-            padding: 10px 20px;
+            padding: 10px 15px;
             font-family: 'Poppins', sans-serif;
             text-decoration: none;
             font-size: 1rem;
@@ -288,19 +289,20 @@
 
         .social-links {
             display: flex;
-            gap: 20px;
-            margin-left: 40px;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-left: 30px;
         }
 
         .social-links a {
             color: var(--text);
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             transition: var(--transition);
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 40px;
+            width: 38px;
+            height: 38px;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.05);
         }
@@ -444,6 +446,24 @@
         .team-member p {
             color: var(--text-secondary);
             font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .team-member .profile-btn {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            box-shadow: 0 3px 10px rgba(0, 180, 163, 0.2);
+        }
+
+        .team-member .profile-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 180, 163, 0.3);
         }
 
         /* Sponsors Section */
@@ -617,6 +637,36 @@
             transform: scale(1.2);
         }
 
+        .slider-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 10;
+            font-size: 1.5rem;
+        }
+
+        .slider-arrow:hover {
+            background: var(--primary);
+        }
+
+        .slider-arrow.left {
+            left: 20px;
+        }
+
+        .slider-arrow.right {
+            right: 20px;
+        }
+
         .memories-btn {
             display: inline-block;
             margin-top: 3rem;
@@ -759,6 +809,7 @@
                 margin-left: auto;
                 margin-right: auto;
                 order: 2;
+                margin-top: 1rem;
             }
         }
 
@@ -787,6 +838,12 @@
 
             .memory-slide {
                 height: 400px;
+            }
+            
+            .slider-arrow {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
             }
         }
 
@@ -822,7 +879,7 @@
             }
 
             .social-links {
-                gap: 15px;
+                gap: 8px;
             }
 
             .social-links a {
@@ -837,6 +894,12 @@
 
             .memory-slide {
                 height: 300px;
+            }
+            
+            .slider-arrow {
+                width: 30px;
+                height: 30px;
+                font-size: 1rem;
             }
         }
 
@@ -970,28 +1033,33 @@
             
             <div class="team-grid">
                 <div class="team-member card-3d glow">
-                    <h3><a href="https://sarveshwarsenthilkumar.github.io">Sarveshwar Senthil Kumar</a></h3>
+                    <h3>Sarveshwar Senthil Kumar</h3>
                     <p>Founder and President</p>
+                    <a href="https://sarveshwarsenthilkumar.github.io" target="_blank" class="profile-btn">Visit Profile</a>
                 </div>
                 
                 <div class="team-member card-3d glow">
-                    <h3><a href="https://www.google.com/search?q=liam+pham">Liam Pham</a></h3>
+                    <h3>Liam Pham</h3>
                     <p>Founder and President</p>
+                    <a href="https://www.google.com/search?q=liam+pham" target="_blank" class="profile-btn">Visit Profile</a>
                 </div>
 
                 <div class="team-member card-3d glow">
-                    <h3><a href="https://www.instagram.com/noronha.nicholas/">Nicholas Noronha</a></h3>
+                    <h3>Nicholas Noronha</h3>
                     <p>Vice-President</p>
+                    <a href="https://www.instagram.com/noronha.nicholas/" target="_blank" class="profile-btn">Visit Profile</a>
                 </div>
                 
                 <div class="team-member card-3d glow">
-                    <h3><a href="https://www.instagram.com/pranavb_nj/">Pranav Bailoor</a></h3>
+                    <h3>Pranav Bailoor</h3>
                     <p>Vice-President</p>
+                    <a href="https://www.instagram.com/pranavb_nj/" target="_blank" class="profile-btn">Visit Profile</a>
                 </div>
                 
                 <div class="team-member card-3d glow">
-                    <h3><a href="https://www.instagram.com/elijah.asf143/">Elijah Reilly-Wright</a></h3>
+                    <h3>Elijah Reilly-Wright</h3>
                     <p>Vice-President</p>
+                    <a href="https://www.instagram.com/elijah.asf143/" target="_blank" class="profile-btn">Visit Profile</a>
                 </div>
             </div>
             
@@ -1124,29 +1192,108 @@
     <!-- Memories Section -->
     <section id="viewmemories" class="section" style="background-color: var(--bg-darker);">
         <div class="container">
-            <div class="section-header">
-                <h2>Notable Memories</h2>
+          <div class="section-header">
+            <h2>Notable Memories</h2>
+        </div>
+        
+        <div class="memories-slider">
+            <div class="slider-arrow left"><i class="fas fa-chevron-left"></i></div>
+        
+            <div class="memory-slide">
+                <!-- JS will insert content here -->
             </div>
-            
-            <div class="memories-slider">
-                <div class="memory-slide">
-                    <img src="club1.jpeg" alt="Greater Toronto Chess League Team">
-                    <div class="memory-caption">
-                        <h3>Greater Toronto Chess League Team</h3>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="slider-nav">
-                <div class="slider-dot active"></div>
-                <div class="slider-dot"></div>
-                <div class="slider-dot"></div>
-                <div class="slider-dot"></div>
-                <div class="slider-dot"></div>
-                <div class="slider-dot"></div>
-                <div class="slider-dot"></div>
-                <div class="slider-dot"></div>
-            </div>
+        
+            <div class="slider-arrow right"><i class="fas fa-chevron-right"></i></div>
+        </div>
+        
+        <div class="slider-nav">
+            <!-- Dots will be generated by JS -->
+        </div>
+        
+        <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const slides = [
+                { image: 'club1.jpeg', caption: 'Greater Toronto Chess League Team' },
+                { image: 'club2.jpeg', caption: 'Liam Pham at Greater Toronto Chess League' },
+                { image: 'club3.jpeg', caption: 'DGT Board at Excelsior Chess Club' },
+                { image: 'club4.jpeg', caption: 'Reply by FM James Canty' },
+                { image: 'club5.png', caption: 'Zugzwang Chess Club Poster' },
+                { image: 'club6.png', caption: 'Zugzwang Champions Concours Winner' },
+                { image: 'club7.jpg', caption: 'Picture with CFC Director: Mr. Don Parakin' },
+                { image: 'club8.JPG', caption: 'Zugzwang at 2024 FIDE Candidates' }
+            ];
+        
+            let currentSlide = 0;
+            const memorySlide = document.querySelector('.memory-slide');
+            const sliderNav = document.querySelector('.slider-nav');
+            const leftArrow = document.querySelector('.slider-arrow.left');
+            const rightArrow = document.querySelector('.slider-arrow.right');
+        
+            // Create dots
+            slides.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.classList.add('slider-dot');
+                if (index === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => {
+                    clearInterval(slideInterval);
+                    showSlide(index);
+                    startAutoSlide();
+                });
+                sliderNav.appendChild(dot);
+            });
+        
+            const dots = document.querySelectorAll('.slider-dot');
+        
+            function showSlide(index) {
+                currentSlide = (index + slides.length) % slides.length;
+                const { image, caption } = slides[currentSlide];
+        
+                memorySlide.innerHTML = `
+                    <img src="${image}" alt="${caption}">
+                    <div class="memory-caption"><h3>${caption}</h3></div>
+                `;
+        
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === currentSlide);
+                });
+            }
+        
+            function startAutoSlide() {
+                slideInterval = setInterval(() => {
+                    showSlide(currentSlide + 1);
+                }, 5000);
+            }
+        
+            leftArrow.addEventListener('click', () => {
+                clearInterval(slideInterval);
+                showSlide(currentSlide - 1);
+                startAutoSlide();
+            });
+        
+            rightArrow.addEventListener('click', () => {
+                clearInterval(slideInterval);
+                showSlide(currentSlide + 1);
+                startAutoSlide();
+            });
+        
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    clearInterval(slideInterval);
+                    showSlide(currentSlide - 1);
+                    startAutoSlide();
+                } else if (e.key === 'ArrowRight') {
+                    clearInterval(slideInterval);
+                    showSlide(currentSlide + 1);
+                    startAutoSlide();
+                }
+            });
+        
+            // Start slider
+            showSlide(0);
+            let slideInterval = null;
+            startAutoSlide();
+        });
+        </script>        
             
             <div style="text-align: center; margin-top: 3rem;">
                 <p>For more memories of <span style="color: var(--accent);">Zugzwang</span>, visit our <span style="background: linear-gradient(90deg,#34A853, #FBBC05); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold;">Google Drive</span> filled with memories:</p>
@@ -1249,77 +1396,6 @@
                     // Close mobile menu if open
                     navLinks.classList.remove('active');
                 }
-            });
-        });
-        
-        // Memory slider functionality
-        let currentSlide = 0;
-        const slides = [
-            {
-                image: 'club1.jpeg',
-                caption: 'Greater Toronto Chess League Team'
-            },
-            {
-                image: 'club2.jpeg',
-                caption: 'Liam Pham at Greater Toronto Chess League'
-            },
-            {
-                image: 'club3.jpeg',
-                caption: 'DGT Board at Excelsior Chess Club'
-            },
-            {
-                image: 'club4.jpeg',
-                caption: 'Reply by FM James Canty'
-            },
-            {
-                image: 'club5.png',
-                caption: 'Zugzwang Chess Club Poster'
-            },
-            {
-                image: 'club6.png',
-                caption: 'Zugzwang Champions Concours Winner'
-            },
-            {
-                image: 'club7.jpg',
-                caption: 'Picture with CFC Director: Mr. Don Parakin'
-            },
-            {
-                image: 'club8.JPG',
-                caption: 'Zugzwang at 2024 FIDE Candidates'
-            }
-        ];
-        
-        const memorySlide = document.querySelector('.memory-slide');
-        const memoryCaption = document.querySelector('.memory-caption h3');
-        const dots = document.querySelectorAll('.slider-dot');
-        
-        function showSlide(index) {
-            currentSlide = (index + slides.length) % slides.length;
-            memorySlide.innerHTML = `
-                <img src="${slides[currentSlide].image}" alt="${slides[currentSlide].caption}">
-                <div class="memory-caption">
-                    <h3>${slides[currentSlide].caption}</h3>
-                </div>
-            `;
-            
-            // Update dots
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === currentSlide);
-            });
-        }
-        
-        // Initialize slider
-        showSlide(0);
-        
-        // Auto-advance slides
-        setInterval(() => {
-            showSlide(currentSlide + 1);
-        }, 5000);
-        
-        // Dot navigation
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                showSlide(index);
             });
         });
         
